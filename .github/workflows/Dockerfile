@@ -1,5 +1,8 @@
-FROM alpine
-RUN apk add --no-cache bash openssh git git-bash-completion
-RUN git clone https://github.com/magicmonty/bash-git-prompt.git /root/.bash-git-prompt --depth=1
-RUN echo -e "source /usr/share/bash-completion/completions/git\nsource /root/.bash-git-prompt/gitprompt.sh" > /root/.bashrc
-CMD ["/bin/bash"]
+FROM maven:3-eclipse-temurin-17-alpine AS build 
+ COPY src /tmp/src 
+ COPY pom.xml /tmp 
+ RUN mvn -f /tmp/pom.xml clean package 
+ FROM eclipse-temurin:17-jdk-alpine 
+ COPY --from=build /tmp/target/*.jar app.jar 
+ EXPOSE 8080 
+ ENTRYPOINT ["java","-jar","app.jar"]
