@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="enviar">
+      <change beforePath="$PROJECT_DIR$/.github/p5/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/P5Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/entity/AppUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/entity/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/ProfileRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/ProfileResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/repository/AppUserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/repository/TokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/service/UserServiceInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/util/Hashing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/app.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/registro.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/registro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/registro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/templates/error/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/api.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/e2e/spec.cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/fixtures/example.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/support/commands.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/support/e2e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/P5ApplicationE2ETest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/controller/UserControllerIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/model/RegisterRequestUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/repository/RepositoryIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pfinal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pfinal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ajm463&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="aa4ab105-2b66-4468-ad29-13970b3f8033" />
+        <option name="url" value="https://github.com/ajm463/pfinal.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2fe2SodLbKOuF1auMRysUopKKZD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.JpaApplication.executor": "Run",
+    "Application.P5Application.executor": "Debug",
+    "Application.Unnamed.executor": "Run",
+    "Docker.Unnamed.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.PfinalApplication.java.executor": "Run",
+    "JUnit.Unnamed.executor": "Run",
+    "Maven.JpaApplication.executor": "Debug",
+    "Maven.jpa [install,--non-recursive].executor": "Run",
+    "Maven.jpa [install].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/aurorajunco/Documents/GitHub/pfinal/jpa",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa" />
+      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src" />
+      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal" />
+      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\.github" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="JpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication" />
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.comillas.icai.gitt.pat.spring.jpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JpaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="" />
+      <created>1714147226822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714147226822</updated>
+    </task>
+    <task id="LOCAL-00001" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714147990570</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714147990570</updated>
+    </task>
+    <task id="LOCAL-00002" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714148053604</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714148053604</updated>
+    </task>
+    <task id="LOCAL-00003" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714148687479</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714148687479</updated>
+    </task>
+    <task id="LOCAL-00004" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714148701682</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714148701682</updated>
+    </task>
+    <task id="LOCAL-00005" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714150855232</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714150855232</updated>
+    </task>
+    <task id="LOCAL-00006" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714150951238</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714150951238</updated>
+    </task>
+    <task id="LOCAL-00007" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714151830597</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714151830597</updated>
+    </task>
+    <task id="LOCAL-00008" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714151852726</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1714151852726</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="enviar" />
+    <option name="LAST_COMMIT_MESSAGE" value="enviar" />
+  </component>
+</project>
