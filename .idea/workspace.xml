@@ -5,52 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="enviar">
-      <change beforePath="$PROJECT_DIR$/.github/p5/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/P5Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/entity/AppUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/entity/Token.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/ProfileRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/ProfileResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/RegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/repository/AppUserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/repository/TokenRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/service/UserServiceInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/java/edu/comillas/icai/gitt/pat/spring/p5/util/Hashing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/app.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/registro.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/registro.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/static/registro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/main/resources/templates/error/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/api.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/e2e/spec.cy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/fixtures/example.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/support/commands.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/e2e/cypress/support/e2e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/P5ApplicationE2ETest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/controller/UserControllerIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/model/RegisterRequestUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/p5/src/test/java/edu/comillas/icai/gitt/pat/spring/p5/repository/RepositoryIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pfinal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pfinal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,11 +62,8 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -132,7 +86,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/aurorajunco/Documents/GitHub/pfinal/jpa",
+    "last_opened_file_path": "C:/Users/aurorajunco/Desktop/GITT_BA/3º/PAT/Prácticas/p5/p5",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
