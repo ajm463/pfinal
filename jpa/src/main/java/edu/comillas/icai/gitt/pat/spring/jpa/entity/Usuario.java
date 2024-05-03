@@ -15,6 +15,6 @@ public class Usuario {
     @Column
     public String contraseña;
     @Column
-    public float tarifa;
+    public float tarifa; //variable
 
 }
