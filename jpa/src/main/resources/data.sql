@@ -25,4 +25,4 @@ INSERT INTO Clase
         (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','8 clases');
 
 
-        //falta completar
+        //falta  ghhj
