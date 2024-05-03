@@ -17,7 +17,4 @@ public class Usuario {
     @Column
     public float tarifa; //variable
 
-
-    //prueba 2
-
 }
