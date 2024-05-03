@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="enviar">
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="crear servicio, controlador y repo y algún TODO" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +18,14 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +55,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -99,6 +103,9 @@
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\.github" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.comillas.icai.gitt.pat.spring.jpa.entity" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,12 +213,30 @@
       <option name="project" value="LOCAL" />
       <updated>1714151852726</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="crear entidades y carpetas">
+      <option name="closed" value="true" />
+      <created>1714385484475</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714385484475</updated>
+    </task>
+    <task id="LOCAL-00010" summary="crear servicio, controlador y repo y algún TODO">
+      <option name="closed" value="true" />
+      <created>1714387044538</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714387044538</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="enviar" />
-    <option name="LAST_COMMIT_MESSAGE" value="enviar" />
+    <MESSAGE value="crear entidades y carpetas" />
+    <MESSAGE value="crear servicio, controlador y repo y algún TODO" />
+    <option name="LAST_COMMIT_MESSAGE" value="crear servicio, controlador y repo y algún TODO" />
   </component>
 </project>
