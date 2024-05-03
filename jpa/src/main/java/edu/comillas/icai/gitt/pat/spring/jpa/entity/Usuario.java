@@ -16,5 +16,5 @@ public class Usuario {
     public String contraseña;
     @Column
     public String tarifa;
-
+    //pruebaaaaa
 }
