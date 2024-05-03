@@ -11,7 +11,7 @@ public class Horario {
     @Id
     public Long id;
     @Column
-    public Long clase; //foreign key tabla clase (ahi es el id)
+    public Clase clase; //foreign key tabla clase (ahi es el id)
 
     @Column
     public LocalTime hora;
