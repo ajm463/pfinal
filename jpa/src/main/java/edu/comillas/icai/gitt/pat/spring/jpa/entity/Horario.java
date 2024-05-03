@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+import java.time.LocalTime;
+
 @Entity
 public class Horario {
     @Id
@@ -12,7 +14,7 @@ public class Horario {
     public Long clase; //foreign key tabla clase (ahi es el id)
 
     @Column
-    public String horario;
+    public LocalTime hora;
 
 
 }
