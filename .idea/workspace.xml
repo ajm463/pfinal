@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Cambiar alguna variable" />
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="enviar">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +22,7 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -31,7 +34,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="aa4ab105-2b66-4468-ad29-13970b3f8033" />
+        <option name="accountId" value="1d3d438f-8042-4c5e-9bd7-fb3d344caf69" />
         <option name="url" value="https://github.com/ajm463/pfinal.git" />
       </UrlAndAccount>
     </option>
@@ -224,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714723675585</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="enviar">
+      <option name="closed" value="true" />
+      <created>1714724797463</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714724797463</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,10 +251,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="enviar" />
     <MESSAGE value="Cambio variables" />
     <MESSAGE value="crear servicio, controlador y repo y algún TODO" />
     <MESSAGE value="Cambiar alguna variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiar alguna variable" />
+    <MESSAGE value="enviar" />
+    <option name="LAST_COMMIT_MESSAGE" value="enviar" />
   </component>
 </project>
