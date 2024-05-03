@@ -18,6 +18,6 @@ public class Usuario {
     public float tarifa; //variable
 
 
-    //prueba
+    //prueba 2
 
 }
