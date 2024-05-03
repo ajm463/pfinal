@@ -23,3 +23,5 @@ INSERT INTO Clase
         (id, nombre, email, contraseña, tarifa) VALUES
         (1 , 'Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', '4 clases'),
         (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','8 clases');
+
+
