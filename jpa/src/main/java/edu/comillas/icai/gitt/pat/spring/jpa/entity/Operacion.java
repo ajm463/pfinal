@@ -15,7 +15,14 @@ public class Operacion {
     public Clase clase; //foreign key tabla clase (ahi es el id) --> one t many
 
     @OneToMany
-    @Column Usuario usuario; //Foreign key de la tabla usuario (el id) One to many
+    @Column
+    public Usuario usuario; //Foreign key de la tabla usuario (el id) One to many
+
+
+
+    @OneToMany
+    @Column
+    public Seguimiento seguimiento;
 
     @Column
     public LocalTime hora;
