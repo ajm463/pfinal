@@ -3,24 +3,15 @@ package edu.comillas.icai.gitt.pat.spring.jpa.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
 @Entity
-public class Clase {
+public class Seguimiento {
     @Id
     public Long id;
     @Column
-    public String nombre;
-    @OneToMany
+    public Usuario usuario;
     @Column
-    public Horario horario;
-
+    public Integer clasesQuedan;
     @Column
-    public String nivel;
-
-    @Column
-    public Integer capacidad;
-
-
-
+    public Integer clasesAsistidas;
 }

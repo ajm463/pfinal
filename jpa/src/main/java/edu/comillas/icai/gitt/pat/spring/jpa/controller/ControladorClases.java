@@ -1,15 +1,16 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.controller;
 
 
+import edu.comillas.icai.gitt.pat.spring.jpa.service.ServicioClases;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ControladorClases {
     //TODO#3 DEFINIR MÉTODOS
-    //nkjblbnñ
-    /*@Autowired
-    ServicioNotas servicioNotas;
-    @GetMapping("/api/alumnos")
+    @Autowired
+    ServicioClases servicioClases;
+    /*@GetMapping("/api/alumnos")
     public Iterable<Alumno> alumnos(){
         return servicioNotas.alumno();
     }
@@ -27,6 +28,6 @@ public class ControladorClases {
     @PutMapping("/api/alumnos/{alumno}/asignaturas/{asignatura}/nota/{nuevaNota}")
     public Integer actualizaNota(@PathVariable Long alumno, @PathVariable Long asignatura, @PathVariable Integer nuevaNota){
         return servicioNotas.actualizaNota(alumno,asignatura,nuevaNota);
-    }
-    //verificar si está bien con los tests!! --> no se si lo he copiado igual*/
+    }*/
+
 }
