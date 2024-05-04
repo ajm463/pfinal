@@ -1,20 +1,32 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Usuario {
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY
+    )
     public Long id;
-    @Column
+
+    @Column(
+            nullable = false
+    )
     public String nombre;
-    @Column
+    @Column(
+            nullable = false
+    )
     public String email;
-    @Column
+
+    @Column(
+            nullable = false
+    )
     public String contraseña;
-    @Column
+
+    @Column(
+            nullable = false
+    )
     public float tarifa; //variable
 
     //pruebaa

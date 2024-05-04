@@ -1,24 +1,34 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 @Entity
 public class Clase {
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY
+    )
     public Long id;
-    @Column
+
+    @Column(
+            nullable = false
+    )
     public String nombre;
     @OneToMany
-    @Column
+    @JoinColumn(
+            name = " horario_id",
+            referencedColumnName = "id",
+            nullable= false)
     public Horario horario;
 
-    @Column
+    @Column(
+            nullable = false
+    )
     public String nivel;
 
-    @Column
+    @Column(
+            nullable = false
+    )
     public Integer capacidad;
 
 
