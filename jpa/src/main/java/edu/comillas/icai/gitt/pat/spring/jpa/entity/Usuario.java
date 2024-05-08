@@ -5,31 +5,18 @@ import jakarta.persistence.*;
 @Entity
 public class Usuario {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public String nombre;
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public String email;
 
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public String contraseña;
 
-    @Column(
-            nullable = false
-    )
-    public float tarifa; //variable
-
-    //pruebaa
-    //prueba marian
+    @Column(nullable = false)
+    public Integer tarifa; //variable
 
 }

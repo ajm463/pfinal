@@ -5,23 +5,16 @@ import jakarta.persistence.*;
 @Entity
 public class Seguimiento {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @Column(
-            nullable = false
-    )
+    @OneToOne
+    @JoinColumn(name = "usuario_id", referencedColumnName = "id", nullable= false)
     public Usuario usuario;
 
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public Integer clasesQuedan;
 
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public Integer clasesAsistidas;
 }

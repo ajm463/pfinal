@@ -5,30 +5,16 @@ import jakarta.persistence.*;
 @Entity
 public class Clase {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.IDENTITY
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public String nombre;
-    @OneToMany
-    @JoinColumn(
-            name = " horario_id",
-            referencedColumnName = "id",
-            nullable= false)
-    public Horario horario;
 
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public String nivel;
 
-    @Column(
-            nullable = false
-    )
+    @Column(nullable = false)
     public Integer capacidad;
 
 

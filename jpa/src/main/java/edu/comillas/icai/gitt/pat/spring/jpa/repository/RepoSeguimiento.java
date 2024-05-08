@@ -1,4 +1,7 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.repository;
 
-public interface RepoSeguimiento {
+import edu.comillas.icai.gitt.pat.spring.jpa.entity.Seguimiento;
+import org.springframework.data.repository.CrudRepository;
+
+public interface RepoSeguimiento extends CrudRepository<Seguimiento, Long> {
 }
