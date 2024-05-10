@@ -34,10 +34,10 @@ public class ControladorClasesIntegrationTest {
         Mockito.when(servicioClases.perfilCrear(Mockito.any(RegisterRequest.class)))
                 .thenReturn(new ProfileResponse(NAME, EMAIL, TARIFA));
         String request = "{" +
-                "\"name\":\"" + NAME + "\"," +
+                "\"nombre\":\"" + NAME + "\"," +
                 "\"email\":\"" + EMAIL + "\"," +
                 "\"tarifa\":\"" + TARIFA + "\"," +
-                "\"password\":\"aaaaaaA1\"}";
+                "\"contrasena\":\"aaaaaaA1\"}";
         // When ...
         this.mockMvc
                 .perform(MockMvcRequestBuilders.post("/api/users")
@@ -46,11 +46,10 @@ public class ControladorClasesIntegrationTest {
                 // Then ...
                 .andExpect(MockMvcResultMatchers.status().isCreated())
                 .andExpect(MockMvcResultMatchers.content().string("{" +
-                        "\"name\":\"" + NAME + "\"," +
+                        "\"nombre\":\"" + NAME + "\"," +
                         "\"email\":\"" + EMAIL + "\"," +
                         "\"tarifa\":\"" + TARIFA + "\"}"));
     }
-
 
     @Test void registerInvalidPassword() throws Exception {
         // Given ...

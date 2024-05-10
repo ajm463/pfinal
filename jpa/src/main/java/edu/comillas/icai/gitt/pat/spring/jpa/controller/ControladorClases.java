@@ -27,7 +27,7 @@ public class ControladorClases {
         try {
             return servicioClases.perfilCrear(register); //creamos nuevo usuario
         } catch (DataIntegrityViolationException e) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage(), e);
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Usuario ya existe o datos no válidos.", e);
         }
     }
 

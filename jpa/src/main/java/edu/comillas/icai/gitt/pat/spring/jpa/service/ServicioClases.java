@@ -129,12 +129,4 @@ public class ServicioClases {
         // repoOperacion.findByUsuario(usuarioSeguimiento.usuario);
 
     }
-
-
-
-
-
-
-
-
 }
