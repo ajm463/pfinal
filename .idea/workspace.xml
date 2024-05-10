@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Cambiar alguna variable">
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/OperacionRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/OperacionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Seguimiento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoSeguimiento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
-    </list>
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Método para apuntarse y desapuntarse" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714724258136</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Método para apuntarse y desapuntarse">
+      <option name="closed" value="true" />
+      <created>1715342407327</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715342407327</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,6 +310,7 @@
     <MESSAGE value="crear servicio, controlador y repo y algún TODO" />
     <MESSAGE value="Cambiar alguna variable" />
     <MESSAGE value="enviar" />
-    <option name="LAST_COMMIT_MESSAGE" value="enviar" />
+    <MESSAGE value="Método para apuntarse y desapuntarse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Método para apuntarse y desapuntarse" />
   </component>
 </project>
