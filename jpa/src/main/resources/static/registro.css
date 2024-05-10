@@ -2,34 +2,100 @@
   box-sizing: border-box;
 }
 body, html {
-  height: 100%;
-  display: grid;
-  font-family: Georgia, serif;
   margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100vh; /* Utiliza vh para el alto completo */
+  display: flex;
+  flex-direction: column;
+  background-color: white; /* Fondo blanco */
 }
+
+header {
+  text-align: center;
+  padding: 3rem 0; /* Espacio superior e inferior */
+}
+
+h1 {
+  color: #206c71; /* Color principal */
+  font-size: 10rem; /* Tamaño del título */
+  margin-bottom: 1.5rem; /* Espacio debajo del título */
+}
+
+p.welcome {
+  color: #164d4f; /* Un tono más claro de azul */
+  font-size: 5rem; /* Tamaño del subtítulo */
+  margin-bottom: 3rem; /* Espacio antes del formulario */
+}
+
 form {
+  width: 90%; /* Ancho del formulario */
+  max-width: 90rem; /* Ancho máximo */
   margin: auto;
-  width: fit-content;
+  height: 70%; /* Ancho del formulario */
+  max-height: 104rem; /* Ancho máximo */
+  padding: 3rem; /* Padding general */
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  background-color: white; /* Fondo del formulario */
 }
+
 label {
-  padding-top: 10px;
   display: block;
+  font-size: 4rem; /* Tamaño de las etiquetas */
+  margin-top: 3rem; /* Espacio superior para cada etiqueta */
 }
-input, select {
+
+input[type="text"], input[type="email"], input[type="password"], select {
   width: 100%;
+  padding: 1.5rem; /* Relleno para los campos */
+  margin-top: 1.5rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+  font-size: 3rem; /* Tamaño del texto dentro de los campos */
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 2rem; /* Padding para un botón más grande */
+  background-color: #206c71;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 3rem; /* Tamaño de fuente para el botón */
+}
+
+input[type="submit"]:hover {
+  background-color: #164d4f; /* Color al pasar el ratón */
 }
 a {
+  color: #206c71;
   padding-top: 10px;
   display: block;
   text-align: center;
-}
-p {
-  text-align: center;
-  border-radius: 3px;
-  padding: 2px;
+  font-size:3rem;
 }
 .error {
   color: darkred;
   border: 2px solid darkred;
   background-color: lightpink;
+  font-size:2rem;
+}
+.success {
+  color: green;
+  border: 2px solid green;
+  background-color: azure;
+  font-size:2rem;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #206c71;
+  color: white;
+  font-size: 2rem;
 }
