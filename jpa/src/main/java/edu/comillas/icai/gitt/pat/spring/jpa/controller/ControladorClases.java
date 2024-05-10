@@ -3,11 +3,8 @@ package edu.comillas.icai.gitt.pat.spring.jpa.controller;
 
 import edu.comillas.icai.gitt.pat.spring.jpa.entity.Token;
 import edu.comillas.icai.gitt.pat.spring.jpa.entity.Usuario;
-import edu.comillas.icai.gitt.pat.spring.jpa.model.LoginRequest;
-import edu.comillas.icai.gitt.pat.spring.jpa.model.ProfileResponse;
-import edu.comillas.icai.gitt.pat.spring.jpa.model.RegisterRequest;
+import edu.comillas.icai.gitt.pat.spring.jpa.model.*;
 import edu.comillas.icai.gitt.pat.spring.jpa.service.ServicioClases;
-import edu.comillas.icai.gitt.pat.spring.jpa.model.ProfileRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -96,5 +93,11 @@ public class ControladorClases {
         if (appUser == null) throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
         servicioClases.delete(appUser); //elimina el perfil del usuario autenticado
     }
+
+   // @PostMapping("/api/users/me/claseSeleccionada")
+    //@ResponseStatus(HttpStatus.NO_CONTENT)
+    //public OperacionResponse(@RequestBody OperacionRequest operacion) {
+
+    //}
 
 }

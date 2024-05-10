@@ -1,15 +1,18 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.service;
 
+import edu.comillas.icai.gitt.pat.spring.jpa.entity.Operacion;
 import edu.comillas.icai.gitt.pat.spring.jpa.entity.Token;
 import edu.comillas.icai.gitt.pat.spring.jpa.entity.Usuario;
-import edu.comillas.icai.gitt.pat.spring.jpa.model.ProfileRequest;
-import edu.comillas.icai.gitt.pat.spring.jpa.model.ProfileResponse;
-import edu.comillas.icai.gitt.pat.spring.jpa.model.RegisterRequest;
+import edu.comillas.icai.gitt.pat.spring.jpa.model.*;
+import edu.comillas.icai.gitt.pat.spring.jpa.repository.RepoClase;
+import edu.comillas.icai.gitt.pat.spring.jpa.repository.RepoOperacion;
 import edu.comillas.icai.gitt.pat.spring.jpa.repository.RepoToken;
 import edu.comillas.icai.gitt.pat.spring.jpa.repository.RepoUsuario;
 import edu.comillas.icai.gitt.pat.spring.jpa.util.Hashing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalTime;
 
 @Service
 public class ServicioClases {
@@ -20,11 +23,15 @@ public class ServicioClases {
     RepoToken repoToken;
     @Autowired
     Hashing hashing;
+    @Autowired
+    RepoClase repoClase;
+    @Autowired
+    RepoOperacion repoOperacion;
 
-    public Token login(String email, String password){
-       Usuario usuario = repoUsuario.findByEmail(email);
-       if(usuario==null||!hashing.compare(usuario.contrasena, password)) {
-           return null;
+    public Token login(String email, String password) {
+        Usuario usuario = repoUsuario.findByEmail(email);
+        if (usuario == null || !hashing.compare(usuario.contrasena, password)) {
+            return null;
         }
         Token token = repoToken.findByUsuario(usuario);
         if (token == null) {
@@ -48,7 +55,7 @@ public class ServicioClases {
         String nombre = usuario.nombre;
         Integer tarifa = usuario.tarifa;
 
-        return new ProfileResponse(nombre, email,tarifa);
+        return new ProfileResponse(nombre, email, tarifa);
     }
 
     public ProfileResponse perfilActualizar(Usuario usuario, ProfileRequest profile) {
@@ -67,6 +74,7 @@ public class ServicioClases {
 
         return new ProfileResponse(newName, usuario.email, newTarifa);
     }
+
     public ProfileResponse perfilCrear(RegisterRequest register) {
         Usuario newUser = new Usuario();
         //para acceder a datos del record hago record.variable()
@@ -89,6 +97,42 @@ public class ServicioClases {
     public void delete(Usuario usuario) {
         repoUsuario.delete(usuario);
     }
+
+    public OperacionResponse apuntarse(OperacionRequest operacion) {
+
+        Boolean apuntarse = operacion.apuntado();
+        Usuario usuario = repoUsuario.findById(operacion.usuario()).orElse(null);
+        if (usuario == null) {
+            return null;
+        }
+
+        if (apuntarse) { //falta en este if ver que alumnos apuntados es menor que capacidad.
+
+            usuario.clasesQuedan -= 1;
+            usuario.clasesAsistidas += 1;
+        } else {
+            usuario.clasesQuedan += 1;
+            usuario.clasesAsistidas -= 1;
+        }
+
+        repoUsuario.save(usuario);
+
+        Operacion operacionNueva = new Operacion();
+        operacionNueva.clase = repoOperacion.findByUsuarioId(operacion.usuario()).clase;
+        operacionNueva.usuario = usuario;
+        operacionNueva.horaOperacion = LocalTime.now();
+        repoOperacion.save(operacionNueva);
+
+        //falta tener en cuenta la capacidad de la clase para dejar apuntarse
+        return new OperacionResponse(operacionNueva.clase.nombre,usuario.id,operacion.apuntado());
+
+        // repoOperacion.findByUsuario(usuarioSeguimiento.usuario);
+
+    }
+
+
+
+
 
 
 

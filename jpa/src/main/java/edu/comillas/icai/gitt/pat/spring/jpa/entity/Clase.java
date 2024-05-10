@@ -17,6 +17,8 @@ public class Clase {
     @Column(nullable = false)
     public Integer capacidad;
 
+    //falta meter usuarios apuntados
+
 
 
 }

@@ -19,4 +19,10 @@ public class Usuario {
     @Column(nullable = false)
     public Integer tarifa; //variable
 
+    @Column(nullable = false)
+    public Integer clasesQuedan;
+
+    @Column(nullable = false)
+    public Integer clasesAsistidas;
+
 }
