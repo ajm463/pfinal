@@ -14,7 +14,7 @@ public class Usuario {
     public String email;
 
     @Column(nullable = false)
-    public String contraseña;
+    public String contrasena;
 
     @Column(nullable = false)
     public Integer tarifa; //variable

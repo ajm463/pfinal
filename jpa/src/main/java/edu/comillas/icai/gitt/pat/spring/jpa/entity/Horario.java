@@ -15,7 +15,7 @@ public class Horario {
     @JoinColumn(name = "clase_id", referencedColumnName = "id")
     public Clase clase;
     @Column(nullable = false)
-    public LocalTime hora;
+    public LocalTime horario;
 
 
 

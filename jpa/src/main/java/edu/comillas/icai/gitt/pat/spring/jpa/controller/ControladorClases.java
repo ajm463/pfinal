@@ -36,7 +36,7 @@ public class ControladorClases {
 
     @PostMapping("/api/users/me/session")
     public ResponseEntity<Void> login(@Valid @RequestBody LoginRequest credentials) { //Recibe credenciales de inicio de sesion en cuerpo solicitud
-        Token token = servicioClases.login(credentials.email(), credentials.contraseña());
+        Token token = servicioClases.login(credentials.email(), credentials.contrasena());
         if (token == null) throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
         //Si user service no autentica al usuario (devolviendo null) entonces lanzo excepcion con estado 401, unauthorized
         ResponseCookie session = ResponseCookie  //Crea nueva cookie http llamada sesion con valor id del token

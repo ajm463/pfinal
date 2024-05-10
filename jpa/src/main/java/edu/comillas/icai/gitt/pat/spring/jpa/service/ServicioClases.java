@@ -23,7 +23,7 @@ public class ServicioClases {
 
     public Token login(String email, String password){
        Usuario usuario = repoUsuario.findByEmail(email);
-       if(usuario==null||!hashing.compare(usuario.contraseña, password)) {
+       if(usuario==null||!hashing.compare(usuario.contrasena, password)) {
            return null;
         }
         Token token = repoToken.findByUsuario(usuario);
@@ -56,12 +56,12 @@ public class ServicioClases {
 
         String newName = profile.nombre();
         Integer newTarifa = profile.tarifa();
-        String newPassword = profile.contraseña();
+        String newPassword = profile.contrasena();
 
         usuario.nombre = newName;
         usuario.tarifa = newTarifa;
         //CONTRASEÑA ENCRIPTADA
-        usuario.contraseña = hashing.hash(newPassword);
+        usuario.contrasena = hashing.hash(newPassword);
 
         repoUsuario.save(usuario); //me actualiza el usuario
 
@@ -75,7 +75,7 @@ public class ServicioClases {
         newUser.tarifa = register.tarifa();
 
         //CONTRASEÑA ENCRIPTADA
-        newUser.contraseña = hashing.hash(register.contraseña());
+        newUser.contrasena = hashing.hash(register.contrasena());
 
         repoUsuario.save(newUser);
 

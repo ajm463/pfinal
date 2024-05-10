@@ -5,40 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Cambiar alguna variable">
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/util/Hashing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/registro.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/registro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/registro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClasesIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Horario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Operacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Operacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Seguimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Seguimiento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/ProfileRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/ProfileRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/ProfileResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/ProfileResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/Tarifa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoClase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoClase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoHorario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoHorario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoSeguimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoSeguimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +85,8 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "Docker.Unnamed.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.ControladorClasesIntegrationTest.registerOk.executor": "Run",
+    "JUnit.ControladorClasesintegrationTest.executor": "Run",
     "JUnit.PfinalApplication.java.executor": "Run",
     "JUnit.Unnamed.executor": "Run",
     "Maven.JpaApplication.executor": "Debug",
@@ -147,7 +122,7 @@
       <recent name="edu.comillas.icai.gitt.pat.spring.jpa.util" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ControladorClasesIntegrationTest.registerOk">
     <configuration name="JpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -163,8 +138,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ControladorClasesIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller" />
+      <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.ControladorClasesIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControladorClasesIntegrationTest.registerOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller" />
+      <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.ControladorClasesIntegrationTest" />
+      <option name="METHOD_NAME" value="registerOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerOk" />
+        <item itemvalue="JUnit.ControladorClasesIntegrationTest" />
         <item itemvalue="Application.JpaApplication" />
       </list>
     </recent_temporary>

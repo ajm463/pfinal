@@ -11,11 +11,11 @@ public class Operacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "clase_id", referencedColumnName = "id", nullable= false)
     public Clase clase; //foreign key tabla clase (ahi es el id) --> one t many
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "usuario_id", referencedColumnName = "id", nullable= false)
     public Usuario usuario; //Foreign key de la tabla usuario (el id) One to many
 
