@@ -153,8 +153,9 @@ public class ServicioClases {
         repoClase.save(clase);
 
         Operacion operacionNueva = new Operacion();
-        operacionNueva.clase = repoOperacion.findByUsuarioId(operacion.usuario()).clase;
+        operacionNueva.clase = clase;
         operacionNueva.usuario = usuario;
+        operacionNueva.esInscripcion = apuntarse;
         operacionNueva.horaOperacion = LocalTime.now();
         repoOperacion.save(operacionNueva);
         //TODO - Tener en cuenta la capacidad de la clase para dejar apuntarse

@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen">
-      <change afterPath="$PROJECT_DIR$/dbdata/tempdb.trace.db" afterDir="false" />
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbdata.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Horario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" afterDir="false" />
     </list>
@@ -340,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715448502745</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse">
+      <option name="closed" value="true" />
+      <created>1715455422623</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715455422623</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -362,7 +365,8 @@
     <MESSAGE value="enviar" />
     <MESSAGE value="Método para apuntarse y desapuntarse" />
     <MESSAGE value="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen" />
+    <MESSAGE value="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

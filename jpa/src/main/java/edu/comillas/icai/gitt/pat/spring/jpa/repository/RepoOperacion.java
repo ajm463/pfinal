@@ -7,5 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 public interface RepoOperacion extends CrudRepository<Operacion, Long> {
     Operacion findByUsuario(Usuario usuario);
 
-    Operacion findByUsuarioId(Long usuario);
+    Operacion findByUsuarioId(Long usuario_id);
 }

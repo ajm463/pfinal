@@ -1,5 +1,5 @@
 INSERT INTO Clase
-    (nombre, nivel, capacidad, plazasDisponibles) VALUES
+    (nombre, nivel, capacidad, plazas_disponibles) VALUES
     ('Pilates Reformer'  , 'Intermedio', 10, 10),
     ('Pilates SpringBoard', 'Intermedio' , 12, 12),
     ('Pilates Estiramiento', 'Bajo', 12, 12),
