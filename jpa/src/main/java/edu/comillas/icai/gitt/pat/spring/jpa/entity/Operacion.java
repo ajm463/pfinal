@@ -22,4 +22,7 @@ public class Operacion {
 
     @Column(nullable = false)
     public LocalTime horaOperacion;
+
+    @Column(nullable = false)
+    public boolean esInscripcion; //true para inscripcion y false para cancelacion
 }

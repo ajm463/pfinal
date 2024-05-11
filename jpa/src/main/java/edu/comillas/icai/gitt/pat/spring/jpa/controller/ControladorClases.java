@@ -27,7 +27,7 @@ public class ControladorClases {
         try {
             return servicioClases.perfilCrear(register); //creamos nuevo usuario
         } catch (DataIntegrityViolationException e) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "Usuario ya existe o datos no válidos.", e);
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Usuario ya existe o datos no válidos." , e);
         }
     }
 
@@ -43,10 +43,9 @@ public class ControladorClases {
                 .path("/") //cookie accesible para todos los caminos del dominio
                 .sameSite("Strict") // evita que la cookie sea enviada con solicitudes de origen cruzado (proteccino a ataques CSRF)
                 .build();
-        return ResponseEntity.status(HttpStatus.CREATED).header(HttpHeaders.SET_COOKIE, session.toString()).build();
-        //devuelve Response entity con estado 201(created), indicando que sesion se ha inciado con exito
+        return ResponseEntity.status(HttpStatus.OK).header(HttpHeaders.SET_COOKIE, session.toString()).build();
+            //devuelve Response entity con estado 200(OK), indicando que sesion se ha inciado con exito
         //Tambien anado la cookie de sesion al encabezado Set-Cookie
-        //NOTA: lo normal seria devolver HttpStatus.OK mas que uno de creacion (o la de no content tb se podria usar)
     }
 
     @DeleteMapping("/api/users/me/session")

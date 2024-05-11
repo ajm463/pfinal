@@ -115,3 +115,336 @@ INSERT INTO Horario (id, clase_id, horario) VALUES (1 , 1, 'Lunes 18:00' ), (2 ,
 org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'4 clases' (USUARIO: ""TARIFA"" FLOAT(24))"
 Data conversion error converting "'4 clases' (USUARIO: ""TARIFA"" FLOAT(24))"; SQL statement:
 INSERT INTO Usuario (id, nombre, email, contraseña, tarifa) VALUES (1 , 'Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', '4 clases'), (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','8 clases') [22018-224]
+2024-05-11 18:15:27.790346+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Imposible interpretar la constante "TIME" "Lunes 18:00"
+Cannot parse "TIME" constant "Lunes 18:00"; SQL statement:
+INSERT INTO Horario (id, clase_id, horario) VALUES (1 , 1, 'Lunes 18:00' ), (2 , 1, 'Miércoles 18:00'), (3 , 1, 'Viernes 18:00' ), (4 , 2, 'Martes 12:00' ), (5 , 2, 'Jueves 12:00'), (6 , 3, 'Martes 17:00' ), (7 , 3, 'Jueves 17:00 ' ), (8 , 4, 'Lunes 11:00' ), (9 , 4, 'Miercoles 11:00'), (10 ,4, 'Viernes 11:00' ) [22007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueTime.parse(ValueTime.java:94)
+	at org.h2.value.Value.convertToTime(Value.java:1909)
+	at org.h2.value.Value.convertTo(Value.java:1170)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1113)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:369)
+	at org.h2.table.Table.convertInsertRow(Table.java:936)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication.main(JpaApplication.java:10)
+Caused by: java.lang.NumberFormatException: Lunes 18
+	at org.h2.util.StringUtils.parseUInt31(StringUtils.java:1116)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:260)
+	at org.h2.util.DateTimeUtils.parseTime(DateTimeUtils.java:440)
+	at org.h2.value.ValueTime.parse(ValueTime.java:92)
+	... 43 more
+2024-05-11 18:15:27.811345+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"
+Data conversion error converting "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"; SQL statement:
+INSERT INTO Usuario (id, nombre, email, contraseña, tarifa) VALUES (1 , 'Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', 'BASICA'), (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','PREMIUM') [22018-224]
+2024-05-11 18:28:54.331624+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ALUMNO" ya existe
+Table "ALUMNO" already exists; SQL statement:
+create table Alumno (id integer not null, nombre varchar(255), primary key (id)) [42101-224]
+2024-05-11 18:28:54.346624+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ASIGNATURA" ya existe
+Table "ASIGNATURA" already exists; SQL statement:
+create table Asignatura (id integer not null, nombre varchar(255), curso varchar(255), primary key (id)) [42101-224]
+2024-05-11 18:28:54.347626+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CALIFICACION" ya existe
+Table "CALIFICACION" already exists; SQL statement:
+create table Calificacion (id integer not null, asignatura integer, alumno integer, nota integer, primary key (id)) [42101-224]
+2024-05-11 18:28:54.351629+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Imposible interpretar la constante "TIME" "Lunes 18:00"
+Cannot parse "TIME" constant "Lunes 18:00"; SQL statement:
+INSERT INTO Horario (id, clase_id, horario) VALUES (1 , 1, 'Lunes 18:00' ), (2 , 1, 'Miércoles 18:00'), (3 , 1, 'Viernes 18:00' ), (4 , 2, 'Martes 12:00' ), (5 , 2, 'Jueves 12:00'), (6 , 3, 'Martes 17:00' ), (7 , 3, 'Jueves 17:00 ' ), (8 , 4, 'Lunes 11:00' ), (9 , 4, 'Miercoles 11:00'), (10 ,4, 'Viernes 11:00' ) [22007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueTime.parse(ValueTime.java:94)
+	at org.h2.value.Value.convertToTime(Value.java:1909)
+	at org.h2.value.Value.convertTo(Value.java:1170)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1113)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:369)
+	at org.h2.table.Table.convertInsertRow(Table.java:936)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication.main(JpaApplication.java:10)
+Caused by: java.lang.NumberFormatException: Lunes 18
+	at org.h2.util.StringUtils.parseUInt31(StringUtils.java:1116)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:260)
+	at org.h2.util.DateTimeUtils.parseTime(DateTimeUtils.java:440)
+	at org.h2.value.ValueTime.parse(ValueTime.java:92)
+	... 43 more
+2024-05-11 18:28:54.353627+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"
+Data conversion error converting "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"; SQL statement:
+INSERT INTO Usuario (id, nombre, email, contraseña, tarifa) VALUES (1 , 'Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', 'BASICA'), (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','PREMIUM') [22018-224]
+2024-05-11 18:51:41.166345+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ALUMNO" ya existe
+Table "ALUMNO" already exists; SQL statement:
+create table Alumno (id integer not null, nombre varchar(255), primary key (id)) [42101-224]
+2024-05-11 18:51:41.181858+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ASIGNATURA" ya existe
+Table "ASIGNATURA" already exists; SQL statement:
+create table Asignatura (id integer not null, nombre varchar(255), curso varchar(255), primary key (id)) [42101-224]
+2024-05-11 18:51:41.181858+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CALIFICACION" ya existe
+Table "CALIFICACION" already exists; SQL statement:
+create table Calificacion (id integer not null, asignatura integer, alumno integer, nota integer, primary key (id)) [42101-224]
+2024-05-11 18:51:41.185859+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Imposible interpretar la constante "TIME" "Lunes 18:00"
+Cannot parse "TIME" constant "Lunes 18:00"; SQL statement:
+INSERT INTO Horario (id, clase_id, horario) VALUES (1 , 1, 'Lunes 18:00' ), (2 , 1, 'Miércoles 18:00'), (3 , 1, 'Viernes 18:00' ), (4 , 2, 'Martes 12:00' ), (5 , 2, 'Jueves 12:00'), (6 , 3, 'Martes 17:00' ), (7 , 3, 'Jueves 17:00 ' ), (8 , 4, 'Lunes 11:00' ), (9 , 4, 'Miercoles 11:00'), (10 ,4, 'Viernes 11:00' ) [22007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueTime.parse(ValueTime.java:94)
+	at org.h2.value.Value.convertToTime(Value.java:1909)
+	at org.h2.value.Value.convertTo(Value.java:1170)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1113)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:369)
+	at org.h2.table.Table.convertInsertRow(Table.java:936)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication.main(JpaApplication.java:10)
+Caused by: java.lang.NumberFormatException: Lunes 18
+	at org.h2.util.StringUtils.parseUInt31(StringUtils.java:1116)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:260)
+	at org.h2.util.DateTimeUtils.parseTime(DateTimeUtils.java:440)
+	at org.h2.value.ValueTime.parse(ValueTime.java:92)
+	... 43 more
+2024-05-11 18:51:41.187859+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"
+Data conversion error converting "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"; SQL statement:
+INSERT INTO Usuario (id, nombre, email, contraseña, tarifa) VALUES (1 , 'Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', 'BASICA'), (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','PREMIUM') [22018-224]
+2024-05-11 18:55:17.396845+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Imposible interpretar la constante "TIME" "Lunes 18:00"
+Cannot parse "TIME" constant "Lunes 18:00"; SQL statement:
+INSERT INTO Horario (id, clase_id, horario) VALUES (1 , 1, 'Lunes 18:00' ), (2 , 1, 'Miércoles 18:00'), (3 , 1, 'Viernes 18:00' ), (4 , 2, 'Martes 12:00' ), (5 , 2, 'Jueves 12:00'), (6 , 3, 'Martes 17:00' ), (7 , 3, 'Jueves 17:00 ' ), (8 , 4, 'Lunes 11:00' ), (9 , 4, 'Miercoles 11:00'), (10 ,4, 'Viernes 11:00' ) [22007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueTime.parse(ValueTime.java:94)
+	at org.h2.value.Value.convertToTime(Value.java:1909)
+	at org.h2.value.Value.convertTo(Value.java:1170)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1113)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:369)
+	at org.h2.table.Table.convertInsertRow(Table.java:936)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication.main(JpaApplication.java:10)
+Caused by: java.lang.NumberFormatException: Lunes 18
+	at org.h2.util.StringUtils.parseUInt31(StringUtils.java:1116)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:260)
+	at org.h2.util.DateTimeUtils.parseTime(DateTimeUtils.java:440)
+	at org.h2.value.ValueTime.parse(ValueTime.java:92)
+	... 43 more
+2024-05-11 18:55:17.411844+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"
+Data conversion error converting "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"; SQL statement:
+INSERT INTO Usuario (id, nombre, email, contraseña, tarifa) VALUES (1 , 'Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', 'BASICA'), (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','PREMIUM') [22018-224]
+2024-05-11 18:59:27.859154+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "USUARIO" ya existe
+Table "USUARIO" already exists; SQL statement:
+CREATE TABLE usuario ( id BIGINT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255), email VARCHAR(255), contraseña VARCHAR(255), tarifa VARCHAR(255), clases_asistidas INT, clases_quedan INT ) [42101-224]
+2024-05-11 18:59:27.876428+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Imposible interpretar la constante "TIME" "Lunes 18:00"
+Cannot parse "TIME" constant "Lunes 18:00"; SQL statement:
+INSERT INTO Horario (id, clase_id, horario) VALUES (1 , 1, 'Lunes 18:00' ), (2 , 1, 'Miércoles 18:00'), (3 , 1, 'Viernes 18:00' ), (4 , 2, 'Martes 12:00' ), (5 , 2, 'Jueves 12:00'), (6 , 3, 'Martes 17:00' ), (7 , 3, 'Jueves 17:00 ' ), (8 , 4, 'Lunes 11:00' ), (9 , 4, 'Miercoles 11:00'), (10 ,4, 'Viernes 11:00' ) [22007-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:518)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.value.ValueTime.parse(ValueTime.java:94)
+	at org.h2.value.Value.convertToTime(Value.java:1909)
+	at org.h2.value.Value.convertTo(Value.java:1170)
+	at org.h2.value.Value.convertForAssignTo(Value.java:1113)
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:369)
+	at org.h2.table.Table.convertInsertRow(Table.java:936)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:167)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication.main(JpaApplication.java:10)
+Caused by: java.lang.NumberFormatException: Lunes 18
+	at org.h2.util.StringUtils.parseUInt31(StringUtils.java:1116)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:260)
+	at org.h2.util.DateTimeUtils.parseTime(DateTimeUtils.java:440)
+	at org.h2.value.ValueTime.parse(ValueTime.java:92)
+	... 43 more
+2024-05-11 18:59:27.879432+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"
+Data conversion error converting "'BASICA' (USUARIO: ""TARIFA"" INTEGER)"; SQL statement:
+INSERT INTO Usuario (id, nombre, email, contraseña, tarifa) VALUES (1 , 'Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', 'BASICA'), (2 , 'Carlos López', 'carlos.lopez@gmail.com', 'contraseña2','PREMIUM') [22018-224]

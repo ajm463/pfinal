@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Método para apuntarse y desapuntarse">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbdata.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/OperacionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/OperacionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/OperacionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/OperacionResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoClase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoClase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Operacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Operacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClasesIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClasesIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +100,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/aurorajunco/Documents/GitHub/pfinal/jpa/src/main/resources/static",
+    "last_opened_file_path": "C:/Users/maria/OneDrive/Documentos/GitHub/pfinal/jpa/src/main/resources/static",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -109,20 +109,35 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources\static" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src\main\resources\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources" />
+      <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources\static" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal" />
-      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\.github" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.comillas.icai.gitt.pat.spring.jpa.entity" />
       <recent name="edu.comillas.icai.gitt.pat.spring.jpa.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ControladorClasesIntegrationTest.apuntarseClase">
+  <component name="RunManager" selected="JUnit.ControladorClasesIntegrationTest.registerOk">
+    <configuration name="JpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication" />
+      <module name="jpa" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.comillas.icai.gitt.pat.spring.jpa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ControladorClasesIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
@@ -186,28 +201,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jpa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.comillas.icai.gitt.pat.spring.jpa.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.repository" />
-      <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.repository.RepositoryIntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ControladorClasesIntegrationTest.apuntarseClase" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerOk" />
+        <item itemvalue="Application.JpaApplication" />
+        <item itemvalue="JUnit.ControladorClasesIntegrationTest.apuntarseClase" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerInvalidPassword" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest" />
-        <item itemvalue="JUnit.RepositoryIntegrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -354,5 +354,16 @@
     <MESSAGE value="enviar" />
     <MESSAGE value="Método para apuntarse y desapuntarse" />
     <option name="LAST_COMMIT_MESSAGE" value="Método para apuntarse y desapuntarse" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/model/RegisterRequestUnitTest.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

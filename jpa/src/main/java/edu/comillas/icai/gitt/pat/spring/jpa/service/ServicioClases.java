@@ -11,6 +11,7 @@ import edu.comillas.icai.gitt.pat.spring.jpa.repository.RepoToken;
 import edu.comillas.icai.gitt.pat.spring.jpa.repository.RepoUsuario;
 import edu.comillas.icai.gitt.pat.spring.jpa.util.Hashing;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalTime;
@@ -77,15 +78,27 @@ public class ServicioClases {
     }
 
     public ProfileResponse perfilCrear(RegisterRequest register) {
+        System.out.println("Buscando usuario existente con email: " + register.email());
+        Usuario usuarioExiste = repoUsuario.findByEmail(register.email());
+        if (usuarioExiste != null) {
+            System.out.println("Usuario existente encontrado: " + usuarioExiste.email);
+
+            throw new DataIntegrityViolationException("El email ya está en uso.");
+
+
+            /*return new ProfileResponse(usuarioExiste.nombre, usuarioExiste.email, usuarioExiste.tarifa);
+        */}
+
+        System.out.println("Creando nuevo usuario con email: " + register.email());
         Usuario newUser = new Usuario();
-        //para acceder a datos del record hago record.variable()
         newUser.nombre = register.nombre();
         newUser.email = register.email();
         newUser.tarifa = register.tarifa();
-
-        //CONTRASEÑA ENCRIPTADA
+        newUser.clasesQuedan = register.tarifa();  // Asegúrate que esto es lo que quieres
+        newUser.clasesAsistidas = 0;
         newUser.contrasena = hashing.hash(register.contrasena());
 
+        System.out.println("Usuario creado con email: " + newUser.email + ", nombre: " + newUser.nombre);
         repoUsuario.save(newUser);
 
         return new ProfileResponse(newUser.nombre, newUser.email, newUser.tarifa);

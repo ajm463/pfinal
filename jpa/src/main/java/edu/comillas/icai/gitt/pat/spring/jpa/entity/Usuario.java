@@ -5,11 +5,12 @@ import jakarta.persistence.*;
 @Entity
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Asegúrate de que esto esté configurado así
     public Long id;
 
     @Column(nullable = false)
     public String nombre;
+
     @Column(nullable = false)
     public String email;
 
