@@ -94,10 +94,18 @@ public class ControladorClases {
         servicioClases.delete(appUser); //elimina el perfil del usuario autenticado
     }
 
-   // @PostMapping("/api/users/me/claseSeleccionada")
-    //@ResponseStatus(HttpStatus.NO_CONTENT)
-    //public OperacionResponse(@RequestBody OperacionRequest operacion) {
+    @PostMapping("/api/users/me/clase/hora")
+    @ResponseStatus(HttpStatus.OK)
+    public OperacionResponse apuntarse(@RequestBody OperacionRequest operacion) {
+        OperacionResponse respuesta = servicioClases.apuntarse(operacion);
+        if(respuesta!=null){
+            return respuesta;
+        }else{
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Ha habido algún error con la solicitud");
+        }
 
-    //}
+    }
+
+
 
 }

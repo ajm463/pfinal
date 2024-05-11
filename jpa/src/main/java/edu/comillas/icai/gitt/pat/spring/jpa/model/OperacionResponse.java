@@ -1,9 +1,14 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.model;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public record OperacionResponse(
-String clase,
-Long usuario,
-Boolean apuntado)
-{ }
+        @NotBlank
+        Long usuario,
+        @NotBlank
+        String clase,
+        @NotNull
+        Boolean apuntado) {}
 
 

@@ -21,6 +21,7 @@ public class ControladorClasesIntegrationTest {
     private static final String EMAIL = "name@email.com";
     private static final Integer TARIFA = 10;
     private static final Integer PASS = 10;
+    private static final Long ID = 1L;
 
     @Autowired
     private MockMvc mockMvc;
@@ -48,8 +49,9 @@ public class ControladorClasesIntegrationTest {
                 .andExpect(MockMvcResultMatchers.content().string("{" +
                         "\"nombre\":\"" + NAME + "\"," +
                         "\"email\":\"" + EMAIL + "\"," +
-                        "\"tarifa\":\"" + TARIFA + "\"}"));
+                        "\"tarifa\":" + TARIFA + "}"));
     }
+
 
     @Test void registerInvalidPassword() throws Exception {
         // Given ...
@@ -67,6 +69,27 @@ public class ControladorClasesIntegrationTest {
                 // Then ...
                 .andExpect(MockMvcResultMatchers.status().isBadRequest());
 
+    }
+
+    @Test void apuntarseClase() throws Exception {
+        // Given ...
+
+        String request = "{" +
+                "\"usuario\":\"" + ID + "\"," +
+                "\"clase\":\"" + "Pilates Core" + "\"," +
+                "\"apuntado\":\"" + true + "\"}";
+
+        // When ...
+        this.mockMvc
+                .perform(MockMvcRequestBuilders.post("/api/users/me/clase/hora")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(request))
+                // Then ...
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().string("{" +
+                        "\"usuario\":\"" + ID + "\"," +
+                        "\"clase\":\"" + "Pilates Core" + "\"," +
+                        "\"apuntado\":\"" + true + "\"}"));
     }
 
 

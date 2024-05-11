@@ -1,5 +1,6 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.service;
 
+import edu.comillas.icai.gitt.pat.spring.jpa.entity.Clase;
 import edu.comillas.icai.gitt.pat.spring.jpa.entity.Operacion;
 import edu.comillas.icai.gitt.pat.spring.jpa.entity.Token;
 import edu.comillas.icai.gitt.pat.spring.jpa.entity.Usuario;
@@ -101,32 +102,39 @@ public class ServicioClases {
     public OperacionResponse apuntarse(OperacionRequest operacion) {
 
         Boolean apuntarse = operacion.apuntado();
+        Clase clase = repoClase.findByNombre(operacion.clase());
         Usuario usuario = repoUsuario.findById(operacion.usuario()).orElse(null);
-        if (usuario == null) {
+        if (usuario == null || clase == null) {
             return null;
         }
 
-        if (apuntarse) { //falta en este if ver que alumnos apuntados es menor que capacidad.
-
+        if (apuntarse && clase.plazasDisponibles>0) { //falta en este if ver que alumnos apuntados es menor que capacidad.
+            clase.plazasDisponibles-=1;
             usuario.clasesQuedan -= 1;
             usuario.clasesAsistidas += 1;
-        } else {
+        } else if(!apuntarse && clase.plazasDisponibles<clase.capacidad){
+            clase.plazasDisponibles+=1; //persona se ha desapuntado
             usuario.clasesQuedan += 1;
             usuario.clasesAsistidas -= 1;
+        } else if(apuntarse && clase.plazasDisponibles==0){
+            return null;
+        } else if(!apuntarse && clase.plazasDisponibles==clase.capacidad){
+            return null;
         }
 
         repoUsuario.save(usuario);
+        repoClase.save(clase);
 
         Operacion operacionNueva = new Operacion();
         operacionNueva.clase = repoOperacion.findByUsuarioId(operacion.usuario()).clase;
         operacionNueva.usuario = usuario;
         operacionNueva.horaOperacion = LocalTime.now();
         repoOperacion.save(operacionNueva);
+        //TODO - Tener en cuenta la capacidad de la clase para dejar apuntarse
 
-        //falta tener en cuenta la capacidad de la clase para dejar apuntarse
-        return new OperacionResponse(operacionNueva.clase.nombre,usuario.id,operacion.apuntado());
+        return new OperacionResponse(usuario.id,operacionNueva.clase.nombre,operacion.apuntado());
 
-        // repoOperacion.findByUsuario(usuarioSeguimiento.usuario);
 
     }
+
 }
