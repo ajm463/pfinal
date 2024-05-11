@@ -14,10 +14,12 @@ public class Horario {
     @ManyToOne
     @JoinColumn(name = "clase_id", referencedColumnName = "id")
     public Clase clase;
+
     @Column(nullable = false)
     public LocalTime horario;
 
-
-
-
+    @Column(nullable = false)
+    public String dia;  // Agregar este campo
 }
+
+

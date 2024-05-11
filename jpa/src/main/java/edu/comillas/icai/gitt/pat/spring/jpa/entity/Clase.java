@@ -17,9 +17,7 @@ public class Clase {
     @Column(nullable = false)
     public Integer capacidad;
 
-    @Column
+    @Column(nullable=false)
     public Integer plazasDisponibles;
-
-
 
 }

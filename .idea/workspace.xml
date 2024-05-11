@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Método para apuntarse y desapuntarse">
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" afterDir="false" />
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen">
+      <change afterPath="$PROJECT_DIR$/dbdata/tempdb.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbdata.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Operacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Operacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Clase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/entity/Horario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -75,7 +75,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.JpaApplication.executor": "Run",
+    "Application.JpaApplication.executor": "Debug",
     "Application.P5Application.executor": "Debug",
     "Application.Unnamed.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
@@ -124,7 +124,7 @@
       <recent name="edu.comillas.icai.gitt.pat.spring.jpa.util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ControladorClasesIntegrationTest.registerOk">
+  <component name="RunManager" selected="Application.JpaApplication">
     <configuration name="JpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication" />
       <module name="jpa" />
@@ -203,8 +203,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerOk" />
         <item itemvalue="Application.JpaApplication" />
+        <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerOk" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest.apuntarseClase" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerInvalidPassword" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest" />
@@ -332,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715342407327</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen">
+      <option name="closed" value="true" />
+      <created>1715448502745</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715448502745</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,7 +361,8 @@
     <MESSAGE value="Cambiar alguna variable" />
     <MESSAGE value="enviar" />
     <MESSAGE value="Método para apuntarse y desapuntarse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Método para apuntarse y desapuntarse" />
+    <MESSAGE value="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,46 +1,42 @@
-DROP TABLE IF EXISTS usuario;
-
-CREATE TABLE usuario (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    contrasena VARCHAR(255) NOT NULL,
-    tarifa VARCHAR(255) NOT NULL,
-    clases_asistidas INTEGER NOT NULL DEFAULT 0,
-    clases_quedan INTEGER NOT NULL
-);
-
-DROP TABLE IF EXISTS clase;
-CREATE TABLE clase (
+CREATE TABLE IF NOT EXISTS Clase (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
     nivel VARCHAR(255) NOT NULL,
-    capacidad INTEGER NOT NULL
+    capacidad INT NOT NULL,
+    plazasDisponibles INT NOT NULL
 );
 
-DROP TABLE IF EXISTS operacion;
-CREATE TABLE operacion (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    usuario_id BIGINT NOT NULL,
-    clase_id BIGINT NOT NULL,
-    hora_operacion TIME NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuario(id),
-    FOREIGN KEY (clase_id) REFERENCES clase(id)
+CREATE TABLE IF NOT EXISTS  Horario (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  clase_id BIGINT NOT NULL,
+  horario TIME NOT NULL,
+  dia VARCHAR(10) NOT NULL,
+  FOREIGN KEY (clase_id) REFERENCES Clase(id)
 );
 
-DROP TABLE IF EXISTS horario;
--- Crea la tabla horario
-CREATE TABLE horario (
+
+CREATE TABLE IF NOT EXISTS  Operacion (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     clase_id BIGINT NOT NULL,
-    horario VARCHAR(255) NOT NULL,
-    FOREIGN KEY (clase_id) REFERENCES clase(id)
-);
-DROP TABLE IF EXISTS token;
--- Crea la tabla token
-CREATE TABLE token (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
     usuario_id BIGINT NOT NULL,
-    token VARCHAR(255) NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuario(id)
+    horaOperacion TIME NOT NULL,
+    esInscripcion BOOLEAN NOT NULL,
+    FOREIGN KEY (clase_id) REFERENCES Clase(id),
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
+
+CREATE TABLE IF NOT EXISTS  Usuario (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    tarifa INT NOT NULL,
+    clasesQuedan INT NOT NULL,
+    clasesAsistidas INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS  Token (
+    id UUID PRIMARY KEY,
+    usuario_id BIGINT NOT NULL UNIQUE,
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE
 );
