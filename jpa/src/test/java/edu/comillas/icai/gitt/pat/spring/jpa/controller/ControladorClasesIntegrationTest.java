@@ -1,6 +1,8 @@
 package edu.comillas.icai.gitt.pat.spring.jpa.controller;
 
 
+import edu.comillas.icai.gitt.pat.spring.jpa.model.OperacionRequest;
+import edu.comillas.icai.gitt.pat.spring.jpa.model.OperacionResponse;
 import edu.comillas.icai.gitt.pat.spring.jpa.model.ProfileResponse;
 import edu.comillas.icai.gitt.pat.spring.jpa.model.RegisterRequest;
 import edu.comillas.icai.gitt.pat.spring.jpa.service.ServicioClases;
@@ -14,8 +16,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+
 @WebMvcTest(ControladorClases.class)
 public class ControladorClasesIntegrationTest {
+
 
     private static final String NAME = "Name";
     private static final String EMAIL = "name@email.com";
@@ -23,11 +27,14 @@ public class ControladorClasesIntegrationTest {
     private static final Integer PASS = 10;
     private static final Long ID = 1L;
 
+
     @Autowired
     private MockMvc mockMvc;
 
+
     @MockBean
     private ServicioClases servicioClases;
+
 
     @Test
     void registerOk() throws Exception {
@@ -53,7 +60,10 @@ public class ControladorClasesIntegrationTest {
     }
 
 
-    @Test void registerInvalidPassword() throws Exception {
+
+
+    @Test
+    void registerInvalidPassword() throws Exception {
         // Given ...
         String requestBody = "{" +
                 "\"name\":\"" + NAME + "\"," +
@@ -61,39 +71,63 @@ public class ControladorClasesIntegrationTest {
                 "\"tarifa\":\"" + TARIFA + "\"," +
                 "\"password\":\"holamundo\"}";  //Contraseña que no cumple los requisitos
 
+
         // When ...
         mockMvc.perform(MockMvcRequestBuilders.post("/api/users")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestBody))
 
+
                 // Then ...
                 .andExpect(MockMvcResultMatchers.status().isBadRequest());
 
+
     }
 
-    @Test void apuntarseClase() throws Exception {
-        // Given ...
+
+    @Test
+    void apuntarseClase() throws Exception {
+        // Given
+        OperacionRequest operacionRequest = new OperacionRequest(ID, "Pilates Core", true);
+        OperacionResponse operacionResponse = new OperacionResponse(ID, "Pilates Core", true);
+        Mockito.when(servicioClases.apuntarse(Mockito.any(OperacionRequest.class))).thenReturn(operacionResponse);
+
 
         String request = "{" +
-                "\"usuario\":\"" + ID + "\"," +
-                "\"clase\":\"" + "Pilates Core" + "\"," +
-                "\"apuntado\":\"" + true + "\"}";
+                "\"usuario\":\"1\"," +
+                "\"clase\":\"Pilates Core\"," +
+                "\"apuntado\":true}";
 
-        // When ...
-        this.mockMvc
-                .perform(MockMvcRequestBuilders.post("/api/users/me/clase/hora")
+
+        // When
+        mockMvc.perform(MockMvcRequestBuilders.post("/api/users/me/clase/hora")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(request))
-                // Then ...
+                // Then
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string("{" +
-                        "\"usuario\":\"" + ID + "\"," +
-                        "\"clase\":\"" + "Pilates Core" + "\"," +
-                        "\"apuntado\":\"" + true + "\"}"));
+                        "\"usuario\":1," + // Cambiado aquí para esperar un entero
+                        "\"clase\":\"Pilates Core\"," +
+                        "\"apuntado\":true}"));
     }
 
-
-
-
-
 }
+
+
+  /* @Test void apuntarseClase() throws Exception {
+       // Given ...
+       String request = "{" +
+               "\"usuario\":\"" + ID + "\"," +
+               "\"clase\":\"" + "Pilates Core" + "\"," +
+               "\"apuntado\":\"" + true + "\"}";
+
+
+       // When ...
+       this.mockMvc
+               .perform(MockMvcRequestBuilders.post("/api/users/me/clase/hora")
+                       .contentType(MediaType.APPLICATION_JSON)
+                       .content(request))
+               // Then ...
+               .andExpect(MockMvcResultMatchers.status().isOk());
+   }*/
+

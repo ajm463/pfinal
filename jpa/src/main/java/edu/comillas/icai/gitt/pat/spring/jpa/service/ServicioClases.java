@@ -12,6 +12,8 @@ import edu.comillas.icai.gitt.pat.spring.jpa.repository.RepoUsuario;
 import edu.comillas.icai.gitt.pat.spring.jpa.util.Hashing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalTime;
@@ -114,7 +116,9 @@ public class ServicioClases {
 
     public OperacionResponse apuntarse(OperacionRequest operacion) {
 
+
         System.out.println("Iniciando proceso de apuntarse para el usuario: " + operacion.usuario());
+
 
         Boolean apuntarse = operacion.apuntado();
         Clase clase = repoClase.findByNombre(operacion.clase());
@@ -123,14 +127,16 @@ public class ServicioClases {
         System.out.println("Usuario" + usuario);
         if (usuario == null || clase == null) {
             System.out.println("Usuario o clase no encontrados.");
-
-            return null;
+            ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario o clase no encontrados.");
         }
+
 
         System.out.println("Usuario y clase encontrados, procediendo...");
 
+
         if (apuntarse && clase.plazasDisponibles>0) { //falta en este if ver que alumnos apuntados es menor que capacidad.
             System.out.println("Apuntando al usuario...");
+
 
             clase.plazasDisponibles-=1;
             usuario.clasesQuedan -= 1;
@@ -138,19 +144,21 @@ public class ServicioClases {
         } else if(!apuntarse && clase.plazasDisponibles<clase.capacidad){
             System.out.println("Desapuntando al usuario...");
 
+
             clase.plazasDisponibles+=1; //persona se ha desapuntado
             usuario.clasesQuedan += 1;
             usuario.clasesAsistidas -= 1;
         } else if(apuntarse && clase.plazasDisponibles==0){
             System.out.println("No se puede realizar la operación solicitada.");
-
-            return null;
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).body("No hay plazas disponibles.");
         } else if(!apuntarse && clase.plazasDisponibles==clase.capacidad){
             return null;
         }
 
+
         repoUsuario.save(usuario);
         repoClase.save(clase);
+
 
         Operacion operacionNueva = new Operacion();
         operacionNueva.clase = clase;
@@ -160,11 +168,16 @@ public class ServicioClases {
         repoOperacion.save(operacionNueva);
         //TODO - Tener en cuenta la capacidad de la clase para dejar apuntarse
 
+
         System.out.println("Operación realizada correctamente.");
+
 
         return new OperacionResponse(usuario.id,operacionNueva.clase.nombre,operacion.apuntado());
 
 
+
+
     }
+
 
 }
