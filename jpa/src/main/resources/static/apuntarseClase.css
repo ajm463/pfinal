@@ -104,13 +104,33 @@ footer {
     color: white;
 }
 .class-info {
-    font-size: 16px; /* Tamaño de fuente adecuado para información adicional */
-    color: white;    /* Texto blanco para contraste */
-    background-color: rgba(0, 128, 128, 0.7); /* Fondo azul semitransparente */
-    padding: 10px;   /* Relleno interno para el texto */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 80%;      /* Anchura relativa al cuadrante */
-    text-align: center; /* Alineación del texto */
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+.enroll-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+    background-color: rgba(0, 128, 128, 0.9);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-btn:hover {
+    background-color: rgba(0, 105, 105, 0.9);
 }
 
 

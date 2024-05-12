@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse">
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/Fotos/fondoClases.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.css" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +14,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager">
+  <component name="ChangesViewManager" show_ignored="true">
     <option name="groupingKeys">
       <option value="directory" />
       <option value="module" />
