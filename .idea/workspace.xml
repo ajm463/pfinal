@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/Fotos/fondoClases.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClasesIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClasesIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

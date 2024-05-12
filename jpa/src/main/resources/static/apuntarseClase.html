@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>ApuntarseClase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntarse a Clase</title>
+    <link rel="stylesheet" href="apuntarseClase.css">
 </head>
 <body>
+<div class="overlay"></div>
+<div class="horizontal-line"></div>
+<div class="vertical-line"></div>
 
+<div class="quadrant" id="quad1">
+    <button onclick="toggleList('list1')">Pilates Reformer</button>
+    <div class="class-info">Nivel: Intermedio, Capacidad: 10</div>
+    <ul id="list1" class="hidden"></ul>
+</div>
+<div class="quadrant" id="quad2">
+    <button onclick="toggleList('list2')">Pilates SpringBoard</button>
+    <div class="class-info">Nivel: Intermedio, Capacidad: 12</div>
+    <ul id="list2" class="hidden"></ul>
+</div>
+<div class="quadrant" id="quad3">
+    <button onclick="toggleList('list3')">Pilates Core</button>
+    <div class="class-info">Nivel: Alto, Capacidad: 12</div>
+    <ul id="list3" class="hidden"></ul>
+</div>
+<div class="quadrant" id="quad4">
+    <button onclick="toggleList('list4')">Pilates Estiramiento</button>
+    <div class="class-info">Nivel: Bajo, Capacidad: 12</div>
+    <ul id="list4" class="hidden"></ul>
+</div>
+
+<footer>
+    © Spring Pilates
+</footer>
+
+<script>
+    function toggleList(listId) {
+        var list = document.getElementById(listId);
+        if (list.style.display === "block") {
+            list.style.display = "none";
+        } else {
+            list.style.display = "block";
+        }
+    }
+</script>
 </body>
 </html>
