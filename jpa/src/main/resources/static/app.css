@@ -6,103 +6,75 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  height: 100vh; /* Utiliza vh para el alto completo */
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: white; /* Fondo blanco */
+  background-image: url('./Fotos/SpringPilates.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
 }
 
 header {
   text-align: center;
-  padding: 1.5 rem 0; /* Espacio superior e inferior */
-}
-h1 {
-  color: #206c71; /* Color principal */
-  font-size: 2rem; /* Tamaño del título */
-  margin-bottom: 0.5rem; /* Espacio debajo del título */
-}
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  background-color: #206c71; /* Fondo del nav ajustado */
-}
-
-nav ul li {
-  margin-right: 1rem; /* Espaciado entre elementos del nav */
-}
-
-nav ul li a, nav a {
-  color: white; /* Ajuste para mejorar la legibilidad y consistencia */
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 1rem; /* Relleno para los enlaces para mejorar la interacción */
-}
-
-nav a:hover {
-  background-color: #A87C7C; /* Fondo al pasar el mouse */
-}
-
-.active {
-  font-weight: bolder; /* Resalta el enlace activo */
-}
-
-main, footer, header, nav {
-  width: 100%; /* Asegura el llenado completo del ancho */
-}
-
-main {
-  flex: 1; /* Permite que main ocupe el espacio disponible */
-  padding: 1rem;
-}
-
-article {
-  margin: auto;
-  width: fit-content;
-}
-
-table {
+  padding: 1rem 0;
   width: 100%;
-  max width: 70 rem;
-  margin-bottom: 2rem;
-  border-collapse: collapse;
-  border: 0.2rem solid silver; /* Corrección de sintaxis en el borde */
 }
 
-tr, td {
-  padding: 1rem; /* Ajuste del relleno para celdas */
-  border: 0.2rem solid silver; /* Ajuste de la sintaxis del borde */
-  font-size: 1rem; /* Tamaño de fuente grande para mejor legibilidad */
-  text-align: left;
+h1 {
+  color: #206c71;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  padding-left: 40px;
 }
 
-label {
-  display: block;
-  padding-top: 0.75rem; /* Ajuste del padding superior */
-  font-size: 1rem; /* Ajuste del tamaño de la fuente para consistencia */
+p {
+  color: #333333; /* Un gris oscuro para contrastar con el fondo */
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Opcional: añade sombra para mejorar la legibilidad */
+  padding-left: 40px;
 }
 
-input{
-  width: 100%; /* Asegura que los inputs y botones llenen el espacio disponible */
-  padding: 1.5rem; /* Aumento de padding para mejor accesibilidad */
-  font-size: 1rem; /* Tamaño de fuente aumentado para mejor legibilidad */
+.button-container {
+  position: fixed;
+  bottom: 100px; /* Ajustado para dejar más espacio sobre el footer */
+  width: 100%;
+  text-align: center;
+  z-index: 10;
 }
 
 button {
-    padding: 1rem 1.5rem; /* Relleno más grande para un botón más accesible */
-    font-size: 1rem; /* Tamaño de fuente grande para el texto del botón */
-    background-color: #206c71; /* Color de fondo para el botón */
-    color: white; /* Color de texto para el botón */
-    border: none; /* Sin bordes para un diseño limpio */
-    border-radius: 0.5rem; /* Bordes redondeados */
-    cursor: pointer; /* Cursor de mano al pasar el mouse */
+  background-color: #164d4f; /* Cambiado a un tono más azul */
+  color: white;
+  padding: 15px 30px; /* Botones más grandes */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem; /* Tamaño de fuente más grande para mayor legibilidad */
 }
+
+button:hover {
+  background-color: #1a5c7a; /* Color más oscuro para hover */
+}
+
 footer {
-  padding: 0.5rem 0; /* Relleno uniforme en el footer */
-  background-color: #206c71; /* Color de fondo del footer */
-  color: white; /* Texto del footer */
-  text-align: center; /* Alineación del texto en el footer */
-  position: fixed; /* Fija el footer en la parte inferior */
-  bottom: 0; /* Posiciona el footer en la parte baja de la pantalla */
+  padding: 1rem 0; /* Ajusta el padding según sea necesario */
+  background-color: #164d4f; /* Mantén tu color deseado */
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+  justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  height: auto; /* Altura automática según el contenido */
+}
+
+.footer-item {
+  margin: 0 10px; /* Espaciado entre los elementos, ajusta según sea necesario */
 }

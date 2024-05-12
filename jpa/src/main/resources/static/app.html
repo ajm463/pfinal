@@ -3,41 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>App</title>
-  <script src="app.js"></script>
+  <title>Spring Pilates</title>
   <link rel="stylesheet" type="text/css" href="app.css" />
 </head>
-<body onload="inicializar()">
+<body>
 <header>
-  <nav>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a onclick="salir()">Salir</a></li>
-    </ul>
-  </nav>
+  <!-- Botones de Iniciar Sesión y Registrarse -->
+  <div class="button-container">
+    <button onclick="window.location.href='login.html';">Iniciar Sesión</button>
+    <button onclick="window.location.href='registro.html';">Registrarse</button>
+  </div>
 </header>
 <main>
   <article id="inicio">
-    <section>
-      Bienvenido,
-      <span id="nombre-inicio"></span>
-    </section>
-    <section>
-      <table>
-        <tr><td>Rol</td><td id="tel-inicio"></td></tr>
-        <tr><td>Correo-e</td><td id="email-inicio"></td></tr>
-      </table>
-    </section>
-    <section>
-      <button type="button" onclick="baja()">Darse de baja</button>
-    </section>
+    <h1>Bienvenido a Spring Pilates</h1>
+    <p>Spring Pilates, compañía referente y líder en Pilates, te ofrece los mejores programas y entrenadores especializados.</p>
   </article>
 </main>
-
 <footer>
-  © Spring Pilates
-  <script>document.write(new Date().getFullYear());</script>
-
+  <div class="footer-item">Email: contacto@springpilates.com</div>
+  <div class="footer-item">Teléfono: +34 912 345 678</div>
+  <div class="footer-item">© Spring Pilates <script>document.write(new Date().getFullYear());</script></div>
 </footer>
 </body>
 </html>

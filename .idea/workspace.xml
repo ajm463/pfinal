@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse">
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/Fotos/SpringPilates.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoOperacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbdata/tempdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata/tempdb.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Record" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -70,7 +72,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.JpaApplication.executor": "Debug",
+    "Application.JpaApplication.executor": "Run",
     "Application.P5Application.executor": "Debug",
     "Application.Unnamed.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
@@ -108,11 +110,11 @@
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src\main\resources\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/jpa/src/main/resources/static/Fotos" />
       <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources" />
       <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources\static" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src" />
-      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.comillas.icai.gitt.pat.spring.jpa.entity" />
