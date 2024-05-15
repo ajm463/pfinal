@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Test" />
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Test">
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
