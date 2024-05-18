@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClasesIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClasesIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,41 +65,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.JpaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.P5Application.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Docker.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JUnit.ControladorClasesIntegrationTest.apuntarseClase.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ControladorClasesIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ControladorClasesIntegrationTest.registerOk.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ControladorClasesintegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PfinalApplication.java.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RegisterRequestUnitTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RepositoryIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.JpaApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven.jpa [install,--non-recursive].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.jpa [install].executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maria/OneDrive/Documentos/GitHub/pfinal/jpa/src/main/resources/static&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.archetype.catalogs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.JpaApplication.executor": "Run",
+    "Application.P5Application.executor": "Debug",
+    "Application.Unnamed.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.Unnamed.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.ControladorClasesIntegrationTest.apuntarseClase.executor": "Run",
+    "JUnit.ControladorClasesIntegrationTest.executor": "Run",
+    "JUnit.ControladorClasesIntegrationTest.loginSuccessfully.executor": "Run",
+    "JUnit.ControladorClasesIntegrationTest.loginUnauthorized.executor": "Run",
+    "JUnit.ControladorClasesIntegrationTest.registerOk.executor": "Run",
+    "JUnit.ControladorClasesintegrationTest.executor": "Run",
+    "JUnit.PfinalApplication.java.executor": "Run",
+    "JUnit.RegisterRequestUnitTest.executor": "Run",
+    "JUnit.RepositoryIntegrationTest.executor": "Run",
+    "JUnit.Unnamed.executor": "Run",
+    "Maven.JpaApplication.executor": "Debug",
+    "Maven.jpa [install,--non-recursive].executor": "Run",
+    "Maven.jpa [install].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/maria/OneDrive/Documentos/GitHub/pfinal/jpa/src/main/resources/static",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources\static" />
@@ -148,7 +148,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControladorClasesIntegrationTest.apuntarseClase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControladorClasesIntegrationTest.loginSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
         <pattern>
@@ -158,13 +158,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller" />
       <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.ControladorClasesIntegrationTest" />
-      <option name="METHOD_NAME" value="apuntarseClase" />
+      <option name="METHOD_NAME" value="loginSuccessfully" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControladorClasesIntegrationTest.registerInvalidPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControladorClasesIntegrationTest.loginUnauthorized" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
         <pattern>
@@ -174,7 +174,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller" />
       <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.ControladorClasesIntegrationTest" />
-      <option name="METHOD_NAME" value="registerInvalidPassword" />
+      <option name="METHOD_NAME" value="loginUnauthorized" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -199,10 +199,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ControladorClasesIntegrationTest" />
+        <item itemvalue="JUnit.ControladorClasesIntegrationTest.loginUnauthorized" />
+        <item itemvalue="JUnit.ControladorClasesIntegrationTest.loginSuccessfully" />
         <item itemvalue="Application.JpaApplication" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerOk" />
-        <item itemvalue="JUnit.ControladorClasesIntegrationTest.apuntarseClase" />
-        <item itemvalue="JUnit.ControladorClasesIntegrationTest.registerInvalidPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -376,16 +376,5 @@
     <MESSAGE value="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse" />
     <MESSAGE value="Test" />
     <option name="LAST_COMMIT_MESSAGE" value="Test" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/jpa/src/test/java/edu/comillas/icai/gitt/pat/spring/jpa/model/RegisterRequestUnitTest.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
