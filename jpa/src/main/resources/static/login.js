@@ -5,11 +5,15 @@ function inicializar() {
 }
 
 function entrar(datosJsonFormulario) {
-  fetch('/api/users/me/session', {method: 'post', body: datosJsonFormulario, headers: {'content-type': 'application/json'}})
-    .then(response => {
-      if (response.ok) location.href = 'app.html';
-      else mostrarAviso('✖︎ Credenciales incorrectas', 'error');
-    });
+  fetch('/api/users/me/session', {
+    method: 'post',
+    body: datosJsonFormulario,
+    headers: {'content-type': 'application/json'}
+  })
+  .then(response => {
+    if (response.ok) location.href = 'apuntarseClase.html';
+    else mostrarAviso('✖︎ Credenciales incorrectas', 'error');
+  });
 }
 
 function mostrarAviso(texto, tipo) {
@@ -21,5 +25,9 @@ function mostrarAviso(texto, tipo) {
 function form2json(event) {
   event.preventDefault();
   const data = new FormData(event.target);
-  return JSON.stringify(Object.fromEntries(data.entries()));
+  const datosFormulario = {
+    email: data.get('email'),
+    contrasena: data.get('contrasena')
+  };
+  return JSON.stringify(datosFormulario);
 }

@@ -19,22 +19,22 @@
   <fieldset>
 
     <label for="nombre">Nombre:</label>
-    <input type="text" name="name" id="nombre" required>
+    <input type="text" name="nombre" id="nombre" required>
 
-    <label for="role">Elija su tarifa:</label>
-    <select name="tarifa" id="role" required>
-      <option value="USER">4</option>
-      <option value="ADMIN">8</option>
+    <label for="tarifa">Elija su tarifa:</label>
+    <select name="tarifa" id="tarifa" required>
+      <option value="4">4</option>
+      <option value="8">8</option>
     </select>
 
     <label for="email">Correo electrónico:</label>
     <input type="email" name="email" id="email" required>
 
     <label for="password">Contraseña:</label>
-    <input type="password" name="password" id="password" required pattern="^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).*$" title="Debe contener al menos una mayúscula, una minúscula y un número" minlength="8" onkeyup="compruebaPass()">
+    <input type="password" name="contrasena" id="password" required pattern="^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).*$" title="Debe contener al menos una mayúscula, una minúscula y un número" minlength="8" onkeyup="compruebaPass()">
 
     <label for="password2">Repetir contraseña:</label>
-    <input type="password" name="password2" id="password2" required onkeyup="compruebaPass()">
+    <input type="password" name="contrasena2" id="password2" required onkeyup="compruebaPass()">
 
     <p id="aviso"></p>
 

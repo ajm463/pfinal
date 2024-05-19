@@ -9,12 +9,16 @@ function compruebaPass() {
 
 function registrarUsuario(datosJsonFormulario) {
   if (!compruebaPass()) return;
-  fetch('/api/users', {method: 'post', body: datosJsonFormulario, headers: {'content-type': 'application/json'}})
-    .then(response => {
-      if (response.ok) location.href = 'login.html?registrado';
-      else if (response.status === 409) mostrarAviso('✖︎ Usuario ya registrado', 'error');
-      else mostrarAviso('✖︎ Error en el registro', 'error');
-    });
+  fetch('/api/users', {
+    method: 'post',
+    body: datosJsonFormulario,
+    headers: {'content-type': 'application/json'}
+  })
+  .then(response => {
+    if (response.ok) location.href = 'login.html?registrado';
+    else if (response.status === 409) mostrarAviso('✖︎ Usuario ya registrado', 'error');
+    else mostrarAviso('✖︎ Error en el registro', 'error');
+  });
 }
 
 function mostrarAviso(texto, tipo) {
@@ -26,5 +30,14 @@ function mostrarAviso(texto, tipo) {
 function form2json(event) {
   event.preventDefault();
   const data = new FormData(event.target);
-  return JSON.stringify(Object.fromEntries(data.entries()));
+  const tarifa = parseInt(document.getElementById("tarifa").value); // Convertir a entero
+  const datosFormulario = {
+    nombre: document.getElementById("nombre").value,
+    tarifa: tarifa,
+    email: document.getElementById("email").value,
+    contrasena: document.getElementById("password").value
+  };
+  return JSON.stringify(datosFormulario);
 }
+
+
