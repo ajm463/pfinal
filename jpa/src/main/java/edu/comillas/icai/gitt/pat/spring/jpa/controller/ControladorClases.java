@@ -105,6 +105,17 @@ public class ControladorClases {
 
     }
 
+    @GetMapping("/api/users/me/perfil")
+    @ResponseStatus(HttpStatus.OK)
+    public Usuario obtenerUsuario(@CookieValue(value = "session", required = true) String session) {
+        Usuario appUser = servicioClases.autenticacion(session);
+        if (appUser == null) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
+        }
+        return appUser;
+    }
+
+
 
 
 }

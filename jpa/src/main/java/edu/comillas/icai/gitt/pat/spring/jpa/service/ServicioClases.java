@@ -13,14 +13,13 @@ import edu.comillas.icai.gitt.pat.spring.jpa.util.Hashing;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalTime;
 
 @Service
 public class ServicioClases {
-    //TODO#2 IMPLEMENTAR EL SERVICIO
     @Autowired
     RepoUsuario repoUsuario;
     @Autowired
@@ -40,14 +39,13 @@ public class ServicioClases {
         Token token = repoToken.findByUsuario(usuario);
         if (token == null) {
             token = new Token();
-            token.usuario = usuario; //Importante asociar el nuevo token a su usuario
-            repoToken.save(token); //Guardamos el token
+            token.usuario = usuario;
+            repoToken.save(token);
         }
         return token;
     }
 
     public Usuario autenticacion(String tokenId) {
-        //como hemos definido relaciones podemos hacerlo directamente
         Token token = repoToken.findById(tokenId).orElse(null);
         if (token == null) return null;
         return token.usuario;
@@ -71,36 +69,27 @@ public class ServicioClases {
 
         usuario.nombre = newName;
         usuario.tarifa = newTarifa;
-        //CONTRASEÑA ENCRIPTADA
         usuario.contrasena = hashing.hash(newPassword);
 
-        repoUsuario.save(usuario); //me actualiza el usuario
+        repoUsuario.save(usuario);
 
         return new ProfileResponse(newName, usuario.email, newTarifa);
     }
 
     public ProfileResponse perfilCrear(RegisterRequest register) {
-        System.out.println("Buscando usuario existente con email: " + register.email());
         Usuario usuarioExiste = repoUsuario.findByEmail(register.email());
         if (usuarioExiste != null) {
-            System.out.println("Usuario existente encontrado: " + usuarioExiste.email);
-
             throw new DataIntegrityViolationException("El email ya está en uso.");
+        }
 
-
-            /*return new ProfileResponse(usuarioExiste.nombre, usuarioExiste.email, usuarioExiste.tarifa);
-        */}
-
-        System.out.println("Creando nuevo usuario con email: " + register.email());
         Usuario newUser = new Usuario();
         newUser.nombre = register.nombre();
         newUser.email = register.email();
         newUser.tarifa = register.tarifa();
-        newUser.clasesQuedan = register.tarifa();  // Asegúrate que esto es lo que quieres
+        newUser.clasesQuedan = register.tarifa();
         newUser.clasesAsistidas = 0;
         newUser.contrasena = hashing.hash(register.contrasena());
 
-        System.out.println("Usuario creado con email: " + newUser.email + ", nombre: " + newUser.nombre);
         repoUsuario.save(newUser);
 
         return new ProfileResponse(newUser.nombre, newUser.email, newUser.tarifa);
@@ -115,50 +104,29 @@ public class ServicioClases {
     }
 
     public OperacionResponse apuntarse(OperacionRequest operacion) {
-
-
-        System.out.println("Iniciando proceso de apuntarse para el usuario: " + operacion.usuario());
-
-
         Boolean apuntarse = operacion.apuntado();
         Clase clase = repoClase.findByNombre(operacion.clase());
-        System.out.println("Clase" + clase);
         Usuario usuario = repoUsuario.findById(operacion.usuario()).orElse(null);
-        System.out.println("Usuario" + usuario);
         if (usuario == null || clase == null) {
-            System.out.println("Usuario o clase no encontrados.");
-            ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario o clase no encontrados.");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario o clase no encontrados.");
         }
 
-
-        System.out.println("Usuario y clase encontrados, procediendo...");
-
-
-        if (apuntarse && clase.plazasDisponibles>0) { //falta en este if ver que alumnos apuntados es menor que capacidad.
-            System.out.println("Apuntando al usuario...");
-
-
-            clase.plazasDisponibles-=1;
-            usuario.clasesQuedan -= 1;
-            usuario.clasesAsistidas += 1;
-        } else if(!apuntarse && clase.plazasDisponibles<clase.capacidad){
-            System.out.println("Desapuntando al usuario...");
-
-
-            clase.plazasDisponibles+=1; //persona se ha desapuntado
-            usuario.clasesQuedan += 1;
-            usuario.clasesAsistidas -= 1;
-        } else if(apuntarse && clase.plazasDisponibles==0){
-            System.out.println("No se puede realizar la operación solicitada.");
-            ResponseEntity.status(HttpStatus.BAD_REQUEST).body("No hay plazas disponibles.");
-        } else if(!apuntarse && clase.plazasDisponibles==clase.capacidad){
-            return null;
+        if (apuntarse && clase.plazasDisponibles > 0) {
+            clase.plazasDisponibles--;
+            usuario.clasesQuedan--;
+            usuario.clasesAsistidas++;
+        } else if (!apuntarse && clase.plazasDisponibles < clase.capacidad) {
+            clase.plazasDisponibles++;
+            usuario.clasesQuedan++;
+            usuario.clasesAsistidas--;
+        } else if (apuntarse && clase.plazasDisponibles == 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "No hay plazas disponibles.");
+        } else if (!apuntarse && clase.plazasDisponibles == clase.capacidad) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El usuario no está apuntado a esta clase.");
         }
-
 
         repoUsuario.save(usuario);
         repoClase.save(clase);
-
 
         Operacion operacionNueva = new Operacion();
         operacionNueva.clase = clase;
@@ -166,18 +134,8 @@ public class ServicioClases {
         operacionNueva.esInscripcion = apuntarse;
         operacionNueva.horaOperacion = LocalTime.now();
         repoOperacion.save(operacionNueva);
-        //TODO - Tener en cuenta la capacidad de la clase para dejar apuntarse
 
-
-        System.out.println("Operación realizada correctamente.");
-
-
-        return new OperacionResponse(usuario.id,operacionNueva.clase.nombre,operacion.apuntado());
-
-
-
-
+        return new OperacionResponse(usuario.id, operacion.clase(), operacion.apuntado());
     }
-
-
 }
+

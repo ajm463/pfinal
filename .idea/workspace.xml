@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="Test">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes1.xml" afterDir="false" />
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="login, registro y js apuntarse">
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/util/CustomErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jpa/src/main/resources/templates/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbdata/tempdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata/tempdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/model/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/controller/ControladorClases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/service/ServicioClases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.js" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/registro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/registro.js" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/registro.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +33,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -106,7 +101,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/aurorajunco/Desktop/GITT_BA/3º/PAT/Prácticas/p5 - Backend",
+    "last_opened_file_path": "C:/Users/aurorajunco/Documents/GitHub/pfinal/jpa/src/main/resources/static",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -115,15 +110,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources\static" />
       <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src\main\resources\static" />
+      <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src\main\resources\templates" />
+      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src\main\resources\static" />
       <recent name="$PROJECT_DIR$/jpa/src/main/resources/static/Fotos" />
       <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources" />
       <recent name="C:\Users\maria\OneDrive\Documentos\GitHub\pfinal\jpa\src\main\resources\static" />
-      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa" />
-      <recent name="C:\Users\aurorajunco\Documents\GitHub\pfinal\jpa\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.comillas.icai.gitt.pat.spring.jpa.entity" />
@@ -362,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715544647829</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="login, registro y js apuntarse">
+      <option name="closed" value="true" />
+      <created>1716134071334</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716134071334</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,6 +389,7 @@
     <MESSAGE value="Modificaciones:&#10;- metodo de register (pasa el test) dejando nuevos usuarios y bloqueando los ya creados&#10;- creacion de data.sql y schema.sql para que funcionen" />
     <MESSAGE value="Modificaciones: &#10;Intentar que cargue bien data sql, probado con h2 y todavia no carga los datos bien + modificacion de metodo apuntarse" />
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="login, registro y js apuntarse" />
+    <option name="LAST_COMMIT_MESSAGE" value="login, registro y js apuntarse" />
   </component>
 </project>
