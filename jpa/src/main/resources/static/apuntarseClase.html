@@ -15,9 +15,9 @@
     <button onclick="toggleList('list1')">Pilates Reformer</button>
     <div class="class-info">Nivel: Intermedio, Capacidad: 10</div>
     <ul id="list1" class="hidden">
-        <li>18:00 - Lunes <button class="enroll-btn" onclick="enroll('Pilates Reformer', '18:00', 'Lunes')">Apuntarse</button></li>
-        <li>18:00 - Miércoles <button class="enroll-btn" onclick="enroll('Pilates Reformer', '18:00', 'Miércoles')">Apuntarse</button></li>
-        <li>18:00 - Viernes <button class="enroll-btn" onclick="enroll('Pilates Reformer', '18:00', 'Viernes')">Apuntarse</button></li>
+        <li>18:00 - Lunes <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Reformer', '18:00', 'Lunes')">Apuntarse</button></li>
+        <li>18:00 - Miércoles <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Reformer', '18:00', 'Miércoles')">Apuntarse</button></li>
+        <li>18:00 - Viernes <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Reformer', '18:00', 'Viernes')">Apuntarse</button></li>
     </ul>
 </div>
 
@@ -25,25 +25,27 @@
     <button onclick="toggleList('list2')">Pilates SpringBoard</button>
     <div class="class-info">Nivel: Intermedio, Capacidad: 12</div>
     <ul id="list2" class="hidden">
-        <li>12:00 - Martes <button class="enroll-btn" onclick="enroll('Pilates SpringBoard', '12:00', 'Martes')">Apuntarse</button></li>
-        <li>12:00 - Jueves <button class="enroll-btn" onclick="enroll('Pilates SpringBoard', '12:00', 'Jueves')">Apuntarse</button></li>
+        <li>12:00 - Martes <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates SpringBoard', '12:00', 'Martes')">Apuntarse</button></li>
+        <li>12:00 - Jueves <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates SpringBoard', '12:00', 'Jueves')">Apuntarse</button></li>
     </ul>
 </div>
+
 <div class="quadrant" id="quad3">
     <button onclick="toggleList('list3')">Pilates Estiramiento</button>
     <div class="class-info">Nivel: Bajo, Capacidad: 12</div>
     <ul id="list3" class="hidden">
-        <li>17:00 - Martes <button class="enroll-btn" onclick="enroll('Pilates Estiramiento', '17:00', 'Martes')">Apuntarse</button></li>
-        <li>17:00 - Jueves <button class="enroll-btn" onclick="enroll('Pilates Estiramiento', '17:00', 'Jueves')">Apuntarse</button></li>
+        <li>17:00 - Martes <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Estiramiento', '17:00', 'Martes')">Apuntarse</button></li>
+        <li>17:00 - Jueves <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Estiramiento', '17:00', 'Jueves')">Apuntarse</button></li>
     </ul>
 </div>
+
 <div class="quadrant" id="quad4">
     <button onclick="toggleList('list4')">Pilates Core</button>
     <div class="class-info">Nivel: Alto, Capacidad: 12</div>
     <ul id="list4" class="hidden">
-        <li>11:00 - Lunes <button class="enroll-btn" onclick="enroll('Pilates Core', '11:00', 'Lunes')">Apuntarse</button></li>
-        <li>11:00 - Miércoles <button class="enroll-btn" onclick="enroll('Pilates Core', '11:00', 'Miércoles')">Apuntarse</button></li>
-        <li>11:00 - Viernes <button class="enroll-btn" onclick="enroll('Pilates Core', '11:00', 'Viernes')">Apuntarse</button></li>
+        <li>11:00 - Lunes <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Core', '11:00', 'Lunes')">Apuntarse</button></li>
+        <li>11:00 - Miércoles <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Core', '11:00', 'Miércoles')">Apuntarse</button></li>
+        <li>11:00 - Viernes <button class="enroll-btn" data-enrolled="false" onclick="enroll(this, 'Pilates Core', '11:00', 'Viernes')">Apuntarse</button></li>
     </ul>
 </div>
 

@@ -133,6 +133,18 @@ footer {
     background-color: rgba(0, 105, 105, 0.9);
 }
 
+/* apuntarseClase.css */
+.enroll-btn[data-enrolled="true"] {
+    background-color: green;
+    color: white;
+}
+
+.enroll-btn[data-enrolled="false"] {
+    background-color: red;
+    color: white;
+}
+
+
 
 
 

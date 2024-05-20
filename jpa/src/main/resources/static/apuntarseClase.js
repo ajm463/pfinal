@@ -1,9 +1,9 @@
 async function obtenerUsuario() {
     try {
-        const response = await fetch('/api/users/me/perfil'); // Cambiado de /api/users/me a /api/users/me/perfil
+        const response = await fetch('/api/users/me/perfil');
         if (response.ok) {
             const usuario = await response.json();
-            return usuario.id; // Suponiendo que el ID del usuario se encuentra en el objeto de usuario devuelto por la API
+            return usuario.id;
         } else {
             console.error('Error al obtener información del usuario:', response.statusText);
             return null;
@@ -14,9 +14,7 @@ async function obtenerUsuario() {
     }
 }
 
-
-
-async function enroll(clase, hora, dia) {
+async function enroll(button, clase, hora, dia) {
     try {
         const usuario = await obtenerUsuario();
         if (!usuario) {
@@ -25,13 +23,13 @@ async function enroll(clase, hora, dia) {
             return;
         }
 
-        const apuntado = confirm(`¿Quieres apuntarte a la clase de ${clase} el ${hora} - ${dia}?`);
+        const esInscripcion = button.getAttribute('data-enrolled') === 'false';
         const operacion = {
             usuario: usuario,
             clase: clase,
             hora: hora,
             dia: dia,
-            apuntado: apuntado
+            apuntado: esInscripcion
         };
 
         const response = await fetch('/api/users/me/clase/hora', {
@@ -43,8 +41,10 @@ async function enroll(clase, hora, dia) {
         });
 
         if (response.ok) {
-            mostrarMensaje(`Te has ${apuntado ? 'apuntado' : 'desapuntado'} correctamente a la clase de ${clase} el ${hora} - ${dia}`, 'success');
-            // Aquí puedes agregar la lógica para actualizar la interfaz de usuario si es necesario (ocultar botón de apuntarse, etc.)
+            button.setAttribute('data-enrolled', esInscripcion ? 'true' : 'false');
+            button.textContent = esInscripcion ? 'Apuntado' : 'Apuntarse';
+            button.style.backgroundColor = esInscripcion ? 'green' : 'red';
+            mostrarMensaje(`Te has ${esInscripcion ? 'apuntado' : 'desapuntado'} correctamente a la clase de ${clase} el ${hora} - ${dia}`, 'success');
         } else {
             mostrarMensaje('Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.', 'error');
         }
@@ -61,14 +61,11 @@ function mostrarMensaje(texto, tipo) {
 function toggleList(listId) {
     const list = document.getElementById(listId);
     if (list) {
-        if (list.style.display === 'none') {
-            list.style.display = 'block';
-        } else {
-            list.style.display = 'none';
-        }
+        list.style.display = list.style.display === 'none' ? 'block' : 'none';
     } else {
         console.error("No se encontró el elemento con el ID: " + listId);
     }
 }
+
 
 

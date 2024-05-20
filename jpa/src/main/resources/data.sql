@@ -19,9 +19,5 @@ INSERT INTO Horario (clase_id, horario, dia) VALUES
   (4, '11:00:00', 'Viernes');
 
 
-INSERT INTO Usuario
-    (nombre, email, contrasena, tarifa, clases_asistidas, clases_quedan) VALUES
-    ('Carmen Martínez', 'carmenmartinez@gmail.com' , 'contraseña1', 8, 0, 8),
-    ('Carlos López', 'carlos.lopez@gmail.com', 'contraseña2',4, 0, 4);
 
 
