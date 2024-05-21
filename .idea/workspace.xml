@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="apuntarseClase">
+    <list default="true" id="727be5b4-d1dd-4d01-851f-ce934a59a846" name="Changes" comment="finalizar frontEnd">
+      <change afterPath="$PROJECT_DIR$/jpa/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbdata/tempdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata/tempdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbdata/tempdb.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata/tempdb.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoClase.java" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/java/edu/comillas/icai/gitt/pat/spring/jpa/repository/RepoClase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.css" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.js" beforeDir="false" afterPath="$PROJECT_DIR$/jpa/src/main/resources/static/apuntarseClase.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +28,7 @@
         <option value="Record" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -126,7 +119,7 @@
       <recent name="edu.comillas.icai.gitt.pat.spring.jpa.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JpaApplication">
+  <component name="RunManager" selected="Docker.jpa/Dockerfile">
     <configuration name="JpaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.JpaApplication" />
       <module name="jpa" />
@@ -171,22 +164,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControladorClasesIntegrationTest.loginSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jpa" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller" />
-      <option name="MAIN_CLASS_NAME" value="edu.comillas.icai.gitt.pat.spring.jpa.controller.ControladorClasesIntegrationTest" />
-      <option name="METHOD_NAME" value="loginSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ControladorClasesIntegrationTest.loginUnauthorized" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jpa" />
       <extension name="coverage">
@@ -203,13 +180,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jpa/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="jpa/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.jpa/Dockerfile" />
         <item itemvalue="Application.JpaApplication" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest.apuntarseClase" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest" />
         <item itemvalue="JUnit.ControladorClasesIntegrationTest.loginUnauthorized" />
-        <item itemvalue="JUnit.ControladorClasesIntegrationTest.loginSuccessfully" />
       </list>
     </recent_temporary>
   </component>
@@ -374,7 +363,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716207236260</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="finalizar frontEnd">
+      <option name="closed" value="true" />
+      <created>1716224316258</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716224316258</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -400,6 +397,7 @@
     <MESSAGE value="Test" />
     <MESSAGE value="login, registro y js apuntarse" />
     <MESSAGE value="apuntarseClase" />
-    <option name="LAST_COMMIT_MESSAGE" value="apuntarseClase" />
+    <MESSAGE value="finalizar frontEnd" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalizar frontEnd" />
   </component>
 </project>
